@@ -1,8 +1,8 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher","cpu","memory","custom/media","tray", "network"],
-	"modules-center": ["river/tags"],
-	"modules-right": ["custom/updates","custom/wallpaper","backlight","pulseaudio","clock", "battery","custom/power"],
+	"modules-left": ["custom/launcher","cpu","memory","network"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": ["backlight","pulseaudio","clock", "battery", "custom/power"],
 	
 	"pulseaudio": {
 		"tooltip": false,
@@ -47,16 +47,23 @@
 		"spacing": 10
 	},
     "clock": {
-        "format": "{: %I:%M %p   %d/%m/%Y}"
+        "format": "{: %I:%M %p   %d/%m/%Y}",
+  "tooltip-format": "<tt><small>{calendar}</small></tt>",
+  "calendar": {
+    "format": {
+      "months": "<span color='#ffead3'><b>{}</b></span>",
+      "today": "<span color='#ff6699'><b>{}</b></span>"
+    }
+  }
     },
     "cpu": {
         "interval": 15,
-        "format": " {}%",
+        "format": " {}%",
         "max-length": 10
     },
     "memory": {
         "interval": 30,
-        "format": " {}%",
+        "format": " {}%",
         "max-length": 10
     },
     "custom/media": {
@@ -73,13 +80,12 @@
         "on-click": "playerctl play-pause"
     },
     "custom/launcher":{
-        "format": " ",
-        "on-click": "rofi -show drun",
-        "on-click-right": "killall rofi"
+        "format": " ",
+        "on-click": "kitty -e neofetch",
     },
     "custom/power":{
-        "format": " ",
-        "on-click": "bash ~/.config/rofi/leave/leave.sh",
+        "format": " ",
+        "on-click": "wlogout",
     },
     "custom/updates":{
         "format": "{} Update(s)",
@@ -91,5 +97,5 @@
     "custom/wallpaper":{
         "format":" ",
         "on-click": "bash ~/.config/system_scripts/pkill_bc"
-    }
+    },
 }

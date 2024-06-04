@@ -252,3 +252,15 @@ window#waybar.hidden {
   color: #161320;
   background: #F2CDCD;
 }
+
+#workspaces button {
+  padding: 0.2em 1em;
+  color: #89DCEB;
+  background: #161320;
+}
+
+#workspaces button.active {
+  color: #161320;
+  background: #89DCEB;
+  transition: all 0.5s ease;
+}
