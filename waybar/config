@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["custom/launcher","cpu","memory","network"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["backlight","pulseaudio","clock", "battery", "custom/power"],
+	"modules-right": ["backlight","pulseaudio", "battery", "clock", "custom/power"],
 	
 	"pulseaudio": {
 		"tooltip": false,
@@ -11,7 +11,7 @@
 		"format-muted": "{icon} {volume}%",
 		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
 		"format-icons": {
-			"default": ["", "", ""]
+			"default": ["", "", " "]
 		}
 	},
 
@@ -46,24 +46,32 @@
 		"icon-size":18,
 		"spacing": 10
 	},
-    "clock": {
-        "format": "{: %I:%M %p   %d/%m/%Y}",
+"clock": {
+        "format": "  {:%I:%M %p}",
+        "format-alt": "{:L%A, %B %d, %Y (%R)}  ",
   "tooltip-format": "<tt><small>{calendar}</small></tt>",
   "calendar": {
     "format": {
       "months": "<span color='#ffead3'><b>{}</b></span>",
       "today": "<span color='#ff6699'><b>{}</b></span>"
     }
-  }
+  },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
     },
     "cpu": {
         "interval": 15,
-        "format": " {}%",
+        "format": "  {}%",
         "max-length": 10
     },
     "memory": {
         "interval": 30,
-        "format": " {}%",
+        "format": "  {}%",
         "max-length": 10
     },
     "custom/media": {
