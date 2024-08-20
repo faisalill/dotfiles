@@ -88,7 +88,7 @@
         "on-click": "playerctl play-pause"
     },
     "custom/launcher":{
-        "format": " ",
+        "format": " ",
         "on-click": "kitty -e neofetch",
     },
     "custom/power":{
