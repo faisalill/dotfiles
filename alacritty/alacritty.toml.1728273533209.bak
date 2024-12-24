@@ -1,0 +1,57 @@
+import = [
+  "/usr/lib/node_modules/alacritty-themes/themes/Catppuccin-Frappe.toml"
+]
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+  [colors.bright]
+  black = "#686868"
+  blue = "#5CCFE6"
+  cyan = "#95E6CB"
+  green = "#A6CC70"
+  magenta = "#FFEE99"
+  red = "#F27983"
+  white = "#FFFFFF"
+  yellow = "#FFCC66"
+
+  [colors.normal]
+  black = "#191E2A"
+  blue = "#73D0FF"
+  cyan = "#95E6CB"
+  green = "#BAE67E"
+  magenta = "#FFD580"
+  red = "#FF3333"
+  white = "#C7C7C7"
+  yellow = "#FFA759"
+
+  [colors.primary]
+  background = "#202734"
+  foreground = "#CBCCC6"
+
+[font]
+size = 12
+
+  [font.bold]
+  family = "JetBrainsMono Nerd Font"
+  style = "Bold"
+
+  [font.bold_italic]
+  family = "JetBrainsMono Nerd Font"
+  style = "Bold Italic"
+
+  [font.italic]
+  family = "JetBrainsMono Nerd Font"
+  style = "Italic"
+
+  [font.normal]
+  family = "JetBrainsMono Nerd Font"
+  style = "SemiBold"
+
+[window]
+dynamic_padding = true
+opacity = 0.75
+
+  [window.padding]
+  x = 16
+  y = 10
